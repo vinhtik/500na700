@@ -75,6 +75,7 @@
   background: #fff;
   transition: all 0.2s;
   outline: none;
+  color: #0F0F17;
   
   &:focus {
     border-color: #000;
@@ -274,7 +275,7 @@
     
 
     .checkboxContainer {
-        padding: 1px 0.5px 1px 1px;
+        padding: 1px 1px 1px 1px;
     }
     
     .submitButton {

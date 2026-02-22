@@ -24,19 +24,10 @@ const ContactModal = ({ isOpen, onClose }) => {
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    
-    if (name === 'phone') {
-      setFormData(prev => ({
-        ...prev,
-        [name]: formatPhone(value)
-      }));
-    } else {
-      setFormData(prev => ({
-        ...prev,
-        [name]: type === 'checkbox' ? checked : value
-      }));
-    }
-    
+     setFormData(prev => ({
+    ...prev,
+    [name]: type === 'checkbox' ? checked : value
+    }));
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }

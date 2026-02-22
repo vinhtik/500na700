@@ -1,0 +1,50 @@
+.newsBlock {
+  margin: 2em auto;
+  padding: 40px 20px;
+  h1{
+    margin-bottom: 1em;
+  }
+}
+
+.sectionTitle {
+  font-size: 2rem;
+  margin-bottom: 32px;
+  color: #333;
+}
+
+.newsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 30px;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 60px 20px;
+  font-size: 1.125rem;
+  color: #666;
+}
+
+.error {
+  color: #d32f2f;
+}
+
+@media (max-width: 768px) {
+  .newsBlock {
+    padding: 0;
+    h1 {
+        font-size: 24px;
+        margin: 10px 0 40px 10px;
+    }
+  }
+  
+  .sectionTitle {
+    font-size: 1.5rem;
+    margin-bottom: 24px;
+  }
+  
+  .newsGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

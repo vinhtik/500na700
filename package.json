@@ -14,7 +14,8 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
-    "eslint": "^9",
-    "eslint-config-next": "16.1.6"
+    "eslint": "^4.0.0",
+    "eslint-config-next": "^0.2.4",
+    "sass": "^1.97.3"
   }
 }

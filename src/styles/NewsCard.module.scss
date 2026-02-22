@@ -1,0 +1,90 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  background: transparent;
+  height: 100%;
+  text-align: left;
+
+    .heading {
+        font-size: 24px;
+        position: relative;
+        display: inline-block;
+        line-height: 1.4;
+        color: #fff;
+        transition: all ease-in-out 0.2s;
+    }
+
+    .heading::after {
+        content: attr(data-text);
+        position: absolute;
+        inset: 0;
+
+        background: linear-gradient(180deg, #FB8627, #F5BEF6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+
+        opacity: 0;
+        transition: opacity 0.2s ease;
+    }
+
+    &:hover {
+        .heading::after {
+        opacity: 1;
+        }
+    }
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  background-color: #f0f0f0;
+}
+
+.content {
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.description {
+  margin: 0 0 16px 0;
+  color: #999;
+  line-height: 1.6;
+  flex: 1;
+  font-size: 16px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.date {
+  color: #fff;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .card {
+        .heading {
+            font-size: 20px;
+           }
+  }
+  
+  .image {
+    height: 218px;
+  }
+  
+  .content {
+    padding: 16px;
+  }
+}
